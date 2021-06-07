@@ -1,0 +1,53 @@
+### server port
+#server.port=8081
+#keycloak.realm=dev
+#keycloak.auth-server-url=http://localhost:8080/auth
+#keycloak.ssl-required=external
+#keycloak.resource=my-app
+#keycloak.public-client=true
+#keycloak.use-resource-role-mappings=true
+#keycloak.securityConstraints[0].authRoles[0]=user
+#keycloak.securityConstraints[0].securityCollections[0].patterns[0]=/*
+#keycloak.securityConstraints[0].securityCollections[0].patterns[1]=/customers
+
+#keycloak.securityConstraints[0].authRoles[1]=admin
+#keycloak.securityConstraints[0].securityCollections[1].patterns[0]=/admin
+
+server:
+  port: 8081
+keycloak:
+  realm: dev
+  auth-server-url: http://localhost:8080/auth
+  ssl-required: external
+  resource: my-app
+  public-client: true
+  use-resource-role-mappings: true
+  security-constraints:
+    - authRoles:
+        - user
+        - admin
+      securityCollections:
+        - patterns:
+            - /
+            - /customers
+        - patterns:
+            - /admin
+
+
+
+#keycloak:
+#  auth-server-url: http://localhost:8080/auth
+#  public-client: true
+#  realm: dev
+#  resource: my-app
+#  securityConstraints:
+#    -   authRoles:
+#          - user
+#        securityCollections:
+#          -   patterns:
+#                - /*
+#                - /customers
+#  ssl-required: external
+#  use-resource-role-mappings: true
+#server:
+#  port: 8081

@@ -3,12 +3,10 @@ package com.example.keycloakapp;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.security.Principal;
 
 @Controller
-@RequestMapping("/")
 public class HomeController {
 
     @GetMapping
@@ -16,6 +14,11 @@ public class HomeController {
         return "hello";
     }
 
+
+    @GetMapping("/admin")
+    public String admin() {
+        return "admin";
+    }
 
     @GetMapping("/customers")
     public String index(Principal principal, Model model) {
