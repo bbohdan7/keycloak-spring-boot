@@ -14,12 +14,6 @@ public class HomeController {
         return "hello";
     }
 
-
-    @GetMapping("/admin")
-    public String admin() {
-        return "admin";
-    }
-
     @GetMapping("/customers")
     public String index(Principal principal, Model model) {
         model.addAttribute("user", "John");
