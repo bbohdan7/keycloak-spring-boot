@@ -28,8 +28,7 @@ keycloak:
       security-collections:
         - name: user
           patterns:
-            - /*
-            - /customers*
+            - /customers/*
     - auth-roles:
         - admin
       security-collections:

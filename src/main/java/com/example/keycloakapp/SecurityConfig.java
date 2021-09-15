@@ -38,6 +38,7 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //http.authorizeRequests().antMatchers("/test").hasAnyRole().
         //A statement below does nothing...thus commented...(IMHO)
         /*http.authorizeRequests()
                 .antMatchers("/admin").hasRole("admin")
