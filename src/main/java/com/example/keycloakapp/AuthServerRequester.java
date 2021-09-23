@@ -39,7 +39,7 @@ public class AuthServerRequester {
     }
 
     private Token createToken() throws IOException {
-        URL url = new URL("http://192.168.0.133:8080/auth/realms/dev/protocol/openid-connect/token");
+        URL url = new URL("http://192.168.0.137:8080/auth/realms/dev/protocol/openid-connect/token");
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("POST");
 
