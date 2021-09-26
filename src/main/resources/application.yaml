@@ -15,6 +15,13 @@
 
 server:
   port: 8081
+  ssl:
+    key-store: classpath:springboot.p12
+    key-alias: springboot
+    key-store-password: password
+    key-store-type: pkcs12
+    key-password: password
+    enabled: true
 keycloak:
   realm: dev
   auth-server-url: http://192.168.0.137:8080/auth

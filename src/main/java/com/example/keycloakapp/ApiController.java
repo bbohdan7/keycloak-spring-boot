@@ -1,6 +1,5 @@
 package com.example.keycloakapp;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +10,6 @@ import java.io.IOException;
 
 @RestController
 public class ApiController {
-
-    @Autowired
-    private HueMoe myBean;
-
-    @GetMapping
-    @RequestMapping("/testing")
-    public void testing() {
-        ResponseEntity.ok("OK!");
-    }
 
     @GetMapping
     @RequestMapping("/admin")
